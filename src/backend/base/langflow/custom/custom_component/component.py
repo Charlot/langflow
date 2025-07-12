@@ -819,6 +819,7 @@ class Component(CustomComponent):
 
         return await self.build_results()
 
+    # @ws 属性获取
     def __getattr__(self, name: str) -> Any:
         if "_attributes" in self.__dict__ and name in self.__dict__["_attributes"]:
             # It is a dict of attributes that are not inputs or outputs all the raw data it should have the loop input.
